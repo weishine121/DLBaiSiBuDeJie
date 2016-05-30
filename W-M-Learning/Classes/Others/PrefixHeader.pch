@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  DLBaiSiBuDeQiJie
+//
+//  Created by iMac 11 on 16/5/4.
+//  Copyright © 2016年 weishine. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+/*** 在#ifdef __OBJC__ 和 #endif之间的内容，只会拷贝到OC源代码文件中，不会拷贝到其它语言源代码文件中 ***/
+#ifdef __OBJC__
+
+#import "UIView+DLExtension.h"
+
+
+
+/*** 日志 ***/
+#ifdef DEBUG
+#define DLLog(...) NSLog(__VA_ARGS__)
+#else
+#define DLLog(...)
+#endif
+
+#define DLLogFunc DLLog(@"%s",__func__);
+
+/*** 颜色 ***/
+#define DLColorA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define DLColor(r,g,b)    DLColorA((r),(g),(b),255)
+#define DLRandomColor     DLColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+#define DLGrayColor(v)    DLColor((v),(v),(v))
+#define DLCommonBgColor   DLGrayColor(206)
+
+#endif
+/*** 在#ifdef __OBJC__ 和 #endif之间的内容，只会拷贝到OC源代码文件中，不会拷贝到其它语言源代码文件中 ***/
+#endif /* PrefixHeader_pch */
