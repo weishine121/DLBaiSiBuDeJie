@@ -1,20 +1,28 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DFD683265084C8B2482FDFDD5C85050B4A8828B6",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
     "e76e8b6d-6270-4d1a-9b75-5b1b2c225136" : {
 
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DFD683265084C8B2482FDFDD5C85050B4A8828B6" : 0,
     "e76e8b6d-6270-4d1a-9b75-5b1b2c225136" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EC83DADB-8852-46B2-8316-493819A19B28",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DFD683265084C8B2482FDFDD5C85050B4A8828B6" : "DLBaiSiBuDeJie\/",
     "e76e8b6d-6270-4d1a-9b75-5b1b2c225136" : "..\/.."
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "DLBaiSiBuDeQiJie",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DLBaiSiBuDeQiJie.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/weishine121\/DLBaiSiBuDeJie.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DFD683265084C8B2482FDFDD5C85050B4A8828B6"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/127.0.0.1\/Repository",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",

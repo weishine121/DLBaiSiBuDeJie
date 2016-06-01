@@ -24,12 +24,25 @@
 - (void)awakeFromNib
 {
     self.autoresizingMask = UIViewAutoresizingNone;
+    self.progressView.roundedCorners = 5;
+    self.progressView.progressLabel.textColor = [UIColor whiteColor];
+    
+    self.imageView.userInteractionEnabled = YES;
 }
 
 - (void)setTopic:(DLTopics *)topic{
     _topic = topic;
     
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.small_image]];
+   [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
     
+    CGFloat progress = 1.0 * receivedSize / expectedSize;
+    self.progressView.progress = progress;
+    self.progressView.hidden = NO;
+    
+    self.progressView.progressLabel.text = [NSString stringWithFormat:@"%.0f%%", progress * 100];
+} completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    self.progressView.hidden = YES;
+}];
+
 }
 @end

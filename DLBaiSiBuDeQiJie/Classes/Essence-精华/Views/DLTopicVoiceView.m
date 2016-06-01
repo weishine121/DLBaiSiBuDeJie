@@ -7,7 +7,7 @@
 //
 
 #import "DLTopicVoiceView.h"
-
+#import "DLTopics.h"
 #import "UIImageView+WebCache.h"
 
 @interface DLTopicVoiceView ()
@@ -19,6 +19,21 @@
 @implementation DLTopicVoiceView
 - (void)awakeFromNib {
   self.autoresizingMask = UIViewAutoresizingNone;
+}
+
+- (void)setTopic:(DLTopics *)topic
+{
+    _topic = topic;
+    
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image]];
+    self.playCountLabel.text = [NSString stringWithFormat:@"%zd播放", topic.playcount];
+    
+    NSInteger minute = topic.voicetime / 60;
+    NSInteger second = topic.voicetime % 60;
+    
+    // %04zd - 占据4位,空出来的位用0来填补
+    self.voiceTimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
+    
 }
 
 @end
